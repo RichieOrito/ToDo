@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li,a{
+    text-decoration: none;
+}
+button:hover,input[type="submit"]{
+    cursor:pointer;
+}
+button,input[type="submit"]{
+    outline:none;
+    border:none;    
+}
