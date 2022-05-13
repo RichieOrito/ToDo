@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
 }
 li,a{
     text-decoration: none;
@@ -11,5 +17,15 @@ button:hover,input[type="submit"]{
 }
 button,input[type="submit"]{
     outline:none;
-    border:none;    
+    border:none;   
+}
+:root{
+    --bg-color: #EB5353;
+    --txt-color: #fff;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Indie Flower', cursive;
 }
