@@ -8,4 +8,7 @@ todoButton.addEventListener('click', addTodo);
 function addTodo(event){
     //prevents form from submitting
     event.preventDefault();
+    //Todo Div
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add("todo");
 }
