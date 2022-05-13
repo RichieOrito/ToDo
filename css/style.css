@@ -22,10 +22,39 @@ button,input[type="submit"]{
 :root{
     --bg-color: #EB5353;
     --txt-color: #fff;
+    --btn-color: #36AE7C;
 }
 body{
     background-color: var(--bg-color);
     color: var(--txt-color);
     font-family: 'Shadows Into Light', cursive;
     font-family: 'Indie Flower', cursive;
+    min-height: 100vh;
 }
+header{
+    font-size: 1.8rem;
+}
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: var(--txt-color);
+}
+form button{
+    color: var(--bg-color);
+    background: var(--txt-color);
+    color: var(--btn-color);
+    transition: all 0.3s ease;
+}
+form button:hover{
+    background-color: var(--btn-color);
+    color: var(--txt-color);
+}
+
