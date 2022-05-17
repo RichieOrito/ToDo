@@ -57,4 +57,10 @@ form button:hover{
     background-color: var(--btn-color);
     color: var(--txt-color);
 }
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
