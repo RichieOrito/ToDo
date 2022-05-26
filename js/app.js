@@ -46,6 +46,7 @@ function deleteCheck(e){
         const todo = item.parentElement;
         //Animation
         todo.classList.add("fall");
+        removeLocalTodos(todo);
         todo.addEventListener('transitionend', function(){
             todo.remove();
         });
@@ -124,5 +125,22 @@ function getTodos(){
     todoDiv.appendChild(trashButton);
     //Append to List
     todoList.appendChild(todoDiv); 
-    })
+    });
+}
+
+function removeLocalTodos(todo){
+    //Check if I do already have things in there
+    let todos;
+    if(localStorage.getItem('todos') === null){
+        todos = [];
+    }else{
+        todos = JSON.parse(localStorage.getItem('todos'));
+    }
+    //clicking on the div and navigating through the list(text) we can access the position on an array using index of
+    const todoIndex = todo.children[0].innerText;
+    //Using the splice method we can remove the element we want if its the 1st 2nd or 3rd element
+    //firt agurment is from what position do you want to remove an element? second arguement is how many do want to remove?
+    todos.splice(todos.indexOf(todoIndex), 1);
+    //I need to set back the local storage am not changing it
+    localStorage.setItem("todos", JSON.stringify(todos));
 }
